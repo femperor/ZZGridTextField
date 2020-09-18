@@ -29,9 +29,9 @@
 
 /* Begin PBXFileReference section */
 		0ED3FABD88B937A3AF8DB2B1 /* Pods-ZZGridTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZGridTextField_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZZGridTextField_Tests/Pods-ZZGridTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		10C8826D4240EAFE580D8039 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		10C8826D4240EAFE580D8039 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		12FFB95307AAD3EF42DB9FAA /* Pods-ZZGridTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZGridTextField_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZZGridTextField_Tests/Pods-ZZGridTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4E14BEBDA467FB487476F5FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4E14BEBDA467FB487476F5FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5883196EACFC0A5F440C0D06 /* Pods-ZZGridTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZGridTextField_Example.release.xcconfig"; path = "Target Support Files/Pods-ZZGridTextField_Example/Pods-ZZGridTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZZGridTextField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZGridTextField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7B1494E5AEC91D365C17E3F3 /* Pods_ZZGridTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZGridTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33128DC23F6845ED3CFDD9F /* Pods-ZZGridTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZGridTextField_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZZGridTextField_Example/Pods-ZZGridTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CA12CD5DC0C8750A36093AB8 /* ZZGridTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZZGridTextField.podspec; path = ../ZZGridTextField.podspec; sourceTree = "<group>"; };
+		CA12CD5DC0C8750A36093AB8 /* ZZGridTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZZGridTextField.podspec; path = ../ZZGridTextField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EC9050A89E001DE003E9EF99 /* Pods_ZZGridTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZGridTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,6 @@
 				0ED3FABD88B937A3AF8DB2B1 /* Pods-ZZGridTextField_Tests.debug.xcconfig */,
 				12FFB95307AAD3EF42DB9FAA /* Pods-ZZGridTextField_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,12 +213,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = B2T9DL6Y5B;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = J5BVFFC7P4;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -228,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -499,13 +500,14 @@
 			baseConfigurationReference = B33128DC23F6845ED3CFDD9F /* Pods-ZZGridTextField_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2T9DL6Y5B;
 				INFOPLIST_FILE = ZZGridTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -514,13 +516,14 @@
 			baseConfigurationReference = 5883196EACFC0A5F440C0D06 /* Pods-ZZGridTextField_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B2T9DL6Y5B;
 				INFOPLIST_FILE = ZZGridTextField/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -528,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0ED3FABD88B937A3AF8DB2B1 /* Pods-ZZGridTextField_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = J5BVFFC7P4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,8 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZGridTextField_Example.app/ZZGridTextField_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -550,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12FFB95307AAD3EF42DB9FAA /* Pods-ZZGridTextField_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = J5BVFFC7P4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -559,8 +563,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZGridTextField_Example.app/ZZGridTextField_Example";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

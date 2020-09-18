@@ -1,0 +1,6 @@
+framework module Pods_ZZGridTextField_Example {
+  umbrella header "Pods-ZZGridTextField_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
