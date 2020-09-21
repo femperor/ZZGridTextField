@@ -102,19 +102,33 @@ open class ZZGridTextField: UITextField {
     }
     
     @objc private func textFieldEditingChanged(sender: UITextField) {
-        guard let text = sender.text else {
+ 
+        guard let text = sender.attributedText, text.string.count > 1 else {
+            print("attributedstring is nil")
             return
         }
     
-        let charGap = gridWidth - secuSymbolWidth - 2*secuSymbolWidth/CGFloat(maxInputNum - 1)
-        let textAttr = [NSAttributedString.Key.font: sender.font!, NSAttributedString.Key.kern: charGap] as [NSAttributedString.Key : Any]
-        sender.text = ""
-        let attrText = text.count > maxInputNum ? String(text.dropLast()) : text
+        if text.string.count > maxInputNum {
+            sender.attributedText = text.attributedSubstring(from: NSRange(location: 0, length: maxInputNum))
+            return
+        }
+        
         if !isSecureTextEntry {
-            sender.attributedText = NSAttributedString(string: attrText, attributes:textAttr)
+            let lastTwoRange = NSRange(location: text.string.count - 2, length: 2)
+            let lastTwo = text.attributedSubstring(from: lastTwoRange)
+      
+            let charGap = gridWidth - lastTwo.string.size(withAttributes:[NSAttributedString.Key.font: self.font!]).width/2.0
+            let textAttr = [NSAttributedString.Key.font: sender.font!, NSAttributedString.Key.kern: charGap] as [NSAttributedString.Key : Any]
+            
+            let newAttributedString = (text.mutableCopy() as! NSMutableAttributedString)
+            newAttributedString.setAttributes(textAttr, range: lastTwoRange)
+            sender.attributedText = newAttributedString
         } else {
-            let secuStr = repeatElement(secuSymbol, count: attrText.count).joined()
-            sender.attributedText = NSAttributedString(string: secuStr, attributes:textAttr)
+            
+            let charGap = gridWidth - ("3" as NSString).size(withAttributes:[NSAttributedString.Key.font: self.font!]).width // gap is about 8.5
+            let textAttr = [NSAttributedString.Key.font: sender.font!, NSAttributedString.Key.kern: charGap] as [NSAttributedString.Key : Any]
+        
+            sender.attributedText = NSAttributedString(string: text.string, attributes:textAttr)
         }
     }
 }

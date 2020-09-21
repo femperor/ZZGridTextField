@@ -218,7 +218,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = J5BVFFC7P4;
+						DevelopmentTeam = B2T9DL6Y5B;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -531,7 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0ED3FABD88B937A3AF8DB2B1 /* Pods-ZZGridTextField_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = J5BVFFC7P4;
+				DEVELOPMENT_TEAM = B2T9DL6Y5B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -553,7 +553,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12FFB95307AAD3EF42DB9FAA /* Pods-ZZGridTextField_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = J5BVFFC7P4;
+				DEVELOPMENT_TEAM = B2T9DL6Y5B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
